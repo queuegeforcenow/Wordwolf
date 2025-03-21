@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワードウルフゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>ワードウルフゲーム</h1>
+
+        <!-- プレイヤー人数を選択 -->
+        <div id="player-count-section">
+            <p>プレイヤー人数を選んでください:</p>
+            <input type="number" id="player-count" min="4" max="10" value="5">
+            <button id="set-player-count">人数設定</button>
+        </div>
+
+        <div id="game-info" style="display:none;">
+            <p id="round">現在のラウンド: <span>0</span></p>
+            <p id="message">ゲームを開始してください！</p>
+        </div>
+
+        <div id="role-info" style="display:none;">
+            <p>あなたの役職: <span id="role-display">未定</span></p>
+            <p>現在のワード: <span id="word-display">未定</span></p>
+        </div>
+
+        <div id="game-controls">
+            <button id="start-button" style="display:none;">ゲーム開始</button>
+            <button id="guess-button" style="display:none;">推測する</button>
+            <button id="next-round-button" style="display:none;">次のラウンド</button>
+        </div>
+
+        <div id="game-end">
+            <button id="reset-button" style="display:none;">ゲームをリセット</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
